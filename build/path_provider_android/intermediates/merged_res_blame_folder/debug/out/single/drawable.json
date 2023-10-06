@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\New folder\\Plant-Disease-Detector\\build\\path_provider_android\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
+        "source": "C:\\Users\\Hiringjack\\.gradle\\caches\\transforms-3\\d11ec818b9dcb6fca960e43081f1fb09\\transformed\\core-1.6.0\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "E:\\New folder\\Plant-Disease-Detector\\build\\path_provider_android\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
+        "source": "C:\\Users\\Hiringjack\\.gradle\\caches\\transforms-3\\d11ec818b9dcb6fca960e43081f1fb09\\transformed\\core-1.6.0\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "E:\\New folder\\Plant-Disease-Detector\\build\\path_provider_android\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
+        "source": "C:\\Users\\Hiringjack\\.gradle\\caches\\transforms-3\\d11ec818b9dcb6fca960e43081f1fb09\\transformed\\core-1.6.0\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "E:\\New folder\\Plant-Disease-Detector\\build\\path_provider_android\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "C:\\Users\\Hiringjack\\.gradle\\caches\\transforms-3\\d11ec818b9dcb6fca960e43081f1fb09\\transformed\\core-1.6.0\\res\\drawable\\notification_tile_bg.xml"
+    }
+]

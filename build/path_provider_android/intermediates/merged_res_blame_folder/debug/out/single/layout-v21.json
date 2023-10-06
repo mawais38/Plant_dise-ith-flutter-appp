@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\New folder\\Plant-Disease-Detector\\build\\path_provider_android\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\Hiringjack\\.gradle\\caches\\transforms-3\\d11ec818b9dcb6fca960e43081f1fb09\\transformed\\core-1.6.0\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "E:\\New folder\\Plant-Disease-Detector\\build\\path_provider_android\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\Hiringjack\\.gradle\\caches\\transforms-3\\d11ec818b9dcb6fca960e43081f1fb09\\transformed\\core-1.6.0\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "E:\\New folder\\Plant-Disease-Detector\\build\\path_provider_android\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\Hiringjack\\.gradle\\caches\\transforms-3\\d11ec818b9dcb6fca960e43081f1fb09\\transformed\\core-1.6.0\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "E:\\New folder\\Plant-Disease-Detector\\build\\path_provider_android\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\Hiringjack\\.gradle\\caches\\transforms-3\\d11ec818b9dcb6fca960e43081f1fb09\\transformed\\core-1.6.0\\res\\layout-v21\\notification_action.xml"
+    }
+]
