@@ -1,21 +1,23 @@
-import 'package:camera/camera.dart';
+import 'dart:async';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:camera/camera.dart';
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:hive/hive.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:plant_disease_detector/constants/constants.dart';
-import 'package:plant_disease_detector/services/classify.dart';
-import 'package:plant_disease_detector/services/disease_provider.dart';
-import 'package:plant_disease_detector/services/hive_database.dart';
-import 'package:plant_disease_detector/src/home_page/components/greeting.dart';
-import 'package:plant_disease_detector/src/home_page/components/history.dart';
-import 'package:plant_disease_detector/src/home_page/components/instructions.dart';
-import 'package:plant_disease_detector/src/home_page/components/titlesection.dart';
-import 'package:plant_disease_detector/src/home_page/models/disease_model.dart';
-import 'package:plant_disease_detector/src/suggestions_page/suggestions.dart';
 import 'package:provider/provider.dart';
 import 'package:tflite/tflite.dart';
+
+import '../../constants/constants.dart';
+import '../../services/classify.dart';
+import '../../services/disease_provider.dart';
+import '../../services/hive_database.dart';
+import '../suggestions_page/suggestions.dart';
+import 'components/greeting.dart';
+import 'components/history.dart';
+import 'components/titlesection.dart';
+import 'models/disease_model.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -27,15 +29,93 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  CameraController? cameraController;
+  List<CameraDescription> cameras = [];
+  bool isDetecting = false;
+  String? prediction;
+
+  @override
+  void initState() {
+    super.initState();
+    initializeCamera();
+    loadModel();
+  }
+
+  Future<void> initializeCamera() async {
+    try {
+      cameras = await availableCameras();
+      cameraController = CameraController(cameras[0], ResolutionPreset.medium);
+      await cameraController!.initialize();
+      if (!mounted) {
+        return;
+      }
+      setState(() {});
+    } catch (e) {
+      print('Error initializing camera: $e');
+    }
+  }
+
+  Future<void> loadModel() async {
+    try {
+      await Tflite.loadModel(
+        model: "assets/model/model_unquant.tflite",
+        labels: "assets/model/labels.txt",
+        numThreads: 1,
+      );
+    } catch (e) {
+      print('Error loading model: $e');
+    }
+  }
+
+  Future<void> classifyFrame() async {
+    if (!isDetecting) {
+      return;
+    }
+
+    if (cameraController != null && cameraController!.value.isInitialized) {
+      try {
+        // Check if a capture is in progress
+        if (!cameraController!.value.isTakingPicture) {
+          XFile image = await cameraController!.takePicture();
+
+          var output = await Tflite.runModelOnImage(
+            path: image.path,
+            imageMean: 0.0,
+            imageStd: 255.0,
+            numResults: 1,
+            threshold: 0.2,
+            asynch: true,
+          );
+
+          if (output != null && output.isNotEmpty) {
+            setState(() {
+              prediction = output[0]['label'];
+            });
+          }
+
+          classifyFrame(); // Continue to classify frames
+        } else {
+          // Wait for the previous capture to complete and then try again
+          await Future.delayed(Duration(milliseconds: 100));
+          classifyFrame();
+        }
+      } catch (e) {
+        print('Error classifying frame: $e');
+      }
+    }
+  }
+
   @override
   void dispose() {
-    Hive.close();
+    if (cameraController != null) {
+      cameraController!.dispose();
+    }
+    Tflite.close();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    // Get disease from provider
     final _diseaseService = Provider.of<DiseaseService>(context);
 
     // Hive service
@@ -119,6 +199,23 @@ class _HomeState extends State<Home> {
               } else {
                 // Display unsure message
 
+              }
+            },
+          ),
+          SpeedDialChild(
+            // This is the new camera access button
+            child: Icon(
+              Icons.camera_alt,
+              color: Colors.white,
+            ),
+            label: "Camera Access",
+            backgroundColor: Colors.blue,
+            onTap: () {
+              setState(() {
+                isDetecting = !isDetecting;
+              });
+              if (isDetecting) {
+                classifyFrame();
               }
             },
           ),

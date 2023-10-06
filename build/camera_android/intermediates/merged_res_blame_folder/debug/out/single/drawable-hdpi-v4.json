@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "E:\\New folder\\Plant-Disease-Detector\\build\\camera_android\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\notification_bg_low_normal.9.png",
+        "source": "C:\\Users\\Hiringjack\\.gradle\\caches\\transforms-3\\d11ec818b9dcb6fca960e43081f1fb09\\transformed\\core-1.6.0\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "E:\\New folder\\Plant-Disease-Detector\\build\\camera_android\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\notification_bg_normal.9.png",
+        "source": "C:\\Users\\Hiringjack\\.gradle\\caches\\transforms-3\\d11ec818b9dcb6fca960e43081f1fb09\\transformed\\core-1.6.0\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "E:\\New folder\\Plant-Disease-Detector\\build\\camera_android\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png",
+        "source": "C:\\Users\\Hiringjack\\.gradle\\caches\\transforms-3\\d11ec818b9dcb6fca960e43081f1fb09\\transformed\\core-1.6.0\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "E:\\New folder\\Plant-Disease-Detector\\build\\camera_android\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png",
+        "source": "C:\\Users\\Hiringjack\\.gradle\\caches\\transforms-3\\d11ec818b9dcb6fca960e43081f1fb09\\transformed\\core-1.6.0\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "E:\\New folder\\Plant-Disease-Detector\\build\\camera_android\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png",
+        "source": "C:\\Users\\Hiringjack\\.gradle\\caches\\transforms-3\\d11ec818b9dcb6fca960e43081f1fb09\\transformed\\core-1.6.0\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
+    }
+]

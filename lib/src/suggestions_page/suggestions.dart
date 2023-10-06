@@ -50,20 +50,20 @@ class Suggestions extends StatelessWidget {
                   child: ListView(
                     children: [
                       TextProperty(
-                        title: 'Disease name',
+                        title: 'Sign',
                         value: _disease.name,
                         height: size.height,
                       ),
-                      TextProperty(
-                        title: 'Possible causes',
-                        value: _disease.possibleCauses,
-                        height: size.height,
-                      ),
-                      TextProperty(
-                        title: 'Possible solution',
-                        value: _disease.possibleSolution,
-                        height: size.height,
-                      ),
+                      // TextProperty(
+                      //   title: 'Possible causes',
+                      //   value: _disease.possibleCauses,
+                      //   height: size.height,
+                      // ),
+                      // TextProperty(
+                      //   title: 'Possible solution',
+                      //   value: _disease.possibleSolution,
+                      //   height: size.height,
+                      // ),
                     ],
                   ),
                 )
