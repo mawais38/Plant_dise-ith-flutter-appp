@@ -76,7 +76,15 @@ class _HomeState extends State<Home> {
       try {
         // Check if a capture is in progress
         if (!cameraController!.value.isTakingPicture) {
+          // Add these lines to lock focus and exposure before taking a picture
+          await cameraController!.setFocusMode(FocusMode.locked);
+          await cameraController!.setExposureMode(ExposureMode.locked);
+
           XFile image = await cameraController!.takePicture();
+
+          // After taking a picture, unlock focus and exposure
+          await cameraController!.setFocusMode(FocusMode.auto);
+          await cameraController!.setExposureMode(ExposureMode.auto);
 
           var output = await Tflite.runModelOnImage(
             path: image.path,

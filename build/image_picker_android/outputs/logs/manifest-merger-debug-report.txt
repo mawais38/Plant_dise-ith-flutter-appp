@@ -31,6 +31,12 @@ uses-sdk
 INJECTED from C:\Users\Hiringjack\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.8+1\android\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Hiringjack\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.8+1\android\src\main\AndroidManifest.xml
 INJECTED from C:\Users\Hiringjack\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.8+1\android\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Hiringjack\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.8+1\android\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Hiringjack\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.8+1\android\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Hiringjack\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.8+1\android\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Hiringjack\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.8+1\android\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Hiringjack\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.8+1\android\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from C:\Users\Hiringjack\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.8+1\android\src\main\AndroidManifest.xml
 		ADDED from C:\Users\Hiringjack\AppData\Local\Pub\Cache\hosted\pub.dev\image_picker_android-0.8.8+1\android\src\main\AndroidManifest.xml
